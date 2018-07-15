@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Original Code</title>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="js/change_requests.js"></script>
+  <style>
+  #new_change_request input[name=commit]:disabled {
+    color: red;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Original Code</h1>
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalWindow">
+      Launch demo modal
+    </button>
+    <div id="modalWindow" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <div id="new_change_request">
+              <form action="" id="new_change_request">
+                <label for="change_request_change_request_reason">
+                  Reason
+                  <input id="change_request_change_request_reason"></input>
+                </label>
+                <input id="button" name="commit" type="submit">
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
