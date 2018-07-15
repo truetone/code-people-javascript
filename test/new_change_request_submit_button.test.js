@@ -1,4 +1,4 @@
-const jquery = require("jquery");
+const $ = require("jquery");
 const NewChangeRequestSubmitButton = require ("../src/new_change_request_submit_button");
 
 describe("NewChangeRequestSubmitButton", () => {
