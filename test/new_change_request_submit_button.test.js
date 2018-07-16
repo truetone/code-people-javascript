@@ -28,3 +28,27 @@ describe("NewChangeRequestSubmitButton", () => {
     expect(submit_button.prop("disabled")).toEqual(false);
   });
 });
+
+describe("NewChangeRequestSubmitButton using defaul arguments", () => {
+  it("should toggle disable based on whether the reason field is empty", () => {
+    document.body.innerHTML =
+    '<div id="new_change_request">' +
+      '<input id="change_request_change_request_reason"></input>' +
+      '<input id="button" name="commit"></input>' +
+    '</div>';
+
+    const submit_button = $("#new_change_request input[name=commit]");
+    const element_to_monitor = $('#change_request_change_request_reason');
+
+    // Instantiate our class with no arguments
+    const button = new NewChangeRequestSubmitButton();
+
+    element_to_monitor.trigger("change");
+
+    expect(submit_button.prop("disabled")).toEqual(true);
+
+    element_to_monitor.val("1");
+    element_to_monitor.trigger("change");
+    expect(submit_button.prop("disabled")).toEqual(false);
+  });
+});

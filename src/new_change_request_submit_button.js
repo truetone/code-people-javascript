@@ -1,18 +1,18 @@
-
+const $ = require("jquery");
 
 class NewChangeRequestSubmitButton {
-  constructor(button, element_to_monitor) {
+  constructor(button = $("#new_change_request input[name=commit]"), element_to_monitor = $('#change_request_change_request_reason')) {
     this.button = button;
     this.element_to_monitor = element_to_monitor;
     this.element_to_monitor.on('change keyup', () => { this.set_state() });
   }
 
   set_state() {
-    if (this.element_to_monitor.val().length == 0) {
-      this.button.prop('disabled', true);
-    } else {
-      this.button.prop('disabled', false);
-    }
+    this.button.prop('disabled', this.state());
+  }
+
+  state() {
+    return this.element_to_monitor.val().length == 0;
   }
 }
 
