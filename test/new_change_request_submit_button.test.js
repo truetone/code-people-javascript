@@ -18,11 +18,13 @@ describe("NewChangeRequestSubmitButton", () => {
     // Instantiate our class and inject our JQuery objects
     const button = new NewChangeRequestSubmitButton(submit_button, element_to_monitor);
 
-    // Manipulate the element we're monitoring
-    element_to_monitor.val("1");
     element_to_monitor.trigger("change");
 
     // Set up our test expectation
     expect(submit_button.prop("disabled")).toEqual(true);
+
+    element_to_monitor.val("1");
+    element_to_monitor.trigger("change");
+    expect(submit_button.prop("disabled")).toEqual(false);
   });
 });
