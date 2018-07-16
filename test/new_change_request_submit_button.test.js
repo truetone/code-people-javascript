@@ -29,7 +29,7 @@ describe("NewChangeRequestSubmitButton", () => {
   });
 });
 
-describe("NewChangeRequestSubmitButton using defaul arguments", () => {
+describe("NewChangeRequestSubmitButton using default arguments", () => {
   it("should toggle disable based on whether the reason field is empty", () => {
     document.body.innerHTML =
     '<div id="new_change_request">' +
